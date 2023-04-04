@@ -125,8 +125,8 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(flavArray, numIndex){
+  
 }
 
 
@@ -145,8 +145,9 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(flavArray, flavName){
+  flavArray.splice(flavArray.indexOf(flavName), 1);
+  return flavArray;
 }
 
 
@@ -170,8 +171,15 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(flavArray, flavString){
+  const newArray = [];
+  for (i = 0; i < flavArray.length; i++) {
+    if (flavArray.includes(flavString) === true) {
+      return flavArray.slice(flavArray.indexOf(flavString), flavArray.indexOf(flavString) + 1) = newArray;
+    } else {
+      return flavArray;
+    }
+  }
 }
 
 
