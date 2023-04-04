@@ -175,7 +175,7 @@ function filterByWord(flavArray, flavString){
   const newArray = [];
   for (i = 0; i < flavArray.length; i++) {
     if (flavArray.includes(flavString) === true) {
-      return flavArray.slice(flavArray.indexOf(flavString), flavArray.indexOf(flavString) + 1) = newArray;
+      return newArray.slice(flavArray.indexOf(flavString), flavArray.indexOf(flavString) + 1)
     } else {
       return flavArray;
     }
