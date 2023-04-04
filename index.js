@@ -46,8 +46,9 @@ Use the copy function below to do the following:
 */
 
 
-function copy(/*your code here*/){
-  /*your code here*/
+function copy(arrayParam){
+  arrayParam = originalFlavors;
+  return arrayParam;
 }
 
 
@@ -63,8 +64,12 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-  /*your code here*/
+function is31Flavors(arrayParam){
+  if (arrayParam.length === 31) {
+    return true;
+  } else {
+    return false;
+  }
  }
 
 
@@ -82,8 +87,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
+function addFlavor(flavArray, flavString){
+  flavArray.unshift(flavString);
+  return flavArray;
  }
 
 
@@ -100,8 +106,9 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(flavArray){
+ flavArray.pop();
+ return flavArray;
 }
 
 
