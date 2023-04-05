@@ -126,9 +126,9 @@ Use the getFlavorByIndex function below to do the following:
 
 
 function getFlavorByIndex(flavArray, numIndex){
-  
+  return flavArray[numIndex];
 }
-
+//From video
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -170,19 +170,30 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-
+/*
 function filterByWord(flavArray, flavString){
-  const newArray = [];
-  for (i = 0; i < flavArray.length; i++) {
+  let newArray = [];
+  for (i = 0; i < flavArray.length ; i++) {
     if (flavArray.includes(flavString) === true) {
-      return newArray.slice(flavArray.indexOf(flavString), flavArray.indexOf(flavString) + 1)
+      return newArray = flavArray.slice(flavArray.indexOf(flavString));
     } else {
       return flavArray;
     }
   }
 }
-
-
+ Original answer
+*/
+//video answer
+function filterByWord(flavArray, flavString) {
+  let filteredArray = [];
+  for(let i = 0; i < flavArray.length; i++) {
+    if (flavArray[i].includes(flavString)) {
+      filteredArray.push(flavArray[i]);
+    }
+  }
+  return filteredArray;
+}
+console.log('task 7:', filterByWord(originalFlavors, "Chocolate"));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
